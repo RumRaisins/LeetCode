@@ -36,7 +36,7 @@ public:
 	}
 };
 int main() {
-	int m, n;
+	/*int m, n;
 	cin >> m >> n;
 	int **net = new int*[m];
 	for (int i = 0; i < m; i++) {
@@ -52,8 +52,10 @@ int main() {
 			cout << net[i][j] << " ";
 		}
 		cout << endl;
-	}
+	}*/
+	Solution sol;
+	cout<<sol.uniquePaths(20, 20)<<endl;
 
 	system("pause");
-	delete[] net;
+	//delete[] net;
 }
