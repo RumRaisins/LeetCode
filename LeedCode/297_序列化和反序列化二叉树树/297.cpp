@@ -15,7 +15,6 @@ public:
 	string serialize(TreeNode* root) {
 		if (root == nullptr) return "#";
 		return to_string(root->val)+","+serialize(root->left)+","+serialize(root->right);
-
 	}
 
 	// Decodes your encoded data to tree.

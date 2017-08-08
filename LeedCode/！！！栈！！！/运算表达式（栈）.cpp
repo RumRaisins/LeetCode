@@ -8,33 +8,33 @@
 typedef struct Stack {
 	int* data;
 	int top_index, max_size;
-} Stack;
+} Stack,*pStack;
 
-void init(Stack* s, int size) {
+void init(pStack s, int size) {
 	s->data = (int*)malloc(sizeof(int) * size);
 	s->max_size = size;
 	s->top_index = -1;
 }
 
-int push(Stack* s, int element) {
+int push(pStack s, int element) {
 	if (s->top_index >= s->max_size - 1)
 		return ERROR;
 	s->data[++s->top_index] = element;
 	return OK;
 }
 
-int pop(Stack* s) {
+int pop(pStack s) {
 	if (s->top_index < 0)
 		return ERROR;
 	--s->top_index;
 	return OK;
 }
 
-int top(Stack* s) {
+int top(pStack s) {
 	return s->data[s->top_index];
 }
 
-int empty(Stack* s) {
+int empty(pStack s) {
 	return s->top_index < 0;
 }
 
@@ -43,8 +43,8 @@ int precede(char a, char b) {
 	return (a == '*' || a == '/') && (b == '+' || b == '-');
 
 }
-int operate(char operator,char a, char b) {
-	switch (operator) {
+int operate(char operator_,char a, char b) {
+	switch (operator_) {
 	case '+':return a + b;
 	case '-':return a - b;
 	case '*':return a*b;
@@ -52,7 +52,7 @@ int operate(char operator,char a, char b) {
 	default:printf("ERROR!\n");
 	}
 }
-void calc(Stack* numbers, Stack* operators) {
+void calc(pStack numbers, pStack operators) {
 	int a = top(numbers);
 	pop(numbers);
 	int b = top(numbers);
@@ -61,7 +61,7 @@ void calc(Stack* numbers, Stack* operators) {
 	pop(operators);
 }
 
-void clear(Stack* s) {
+void clear(pStack s) {
 	free(s->data);
 	free(s);
 }
@@ -70,9 +70,9 @@ int main() {
 	int n;
 	scanf("%d", &n);
 	char* buffer = (char*)malloc(sizeof(char) * (n + 1));
-	Stack *numbers = (Stack*)malloc(sizeof(Stack));
+	Stack *numbers = (pStack)malloc(sizeof(Stack));
 	init(numbers, n);
-	Stack *operators = (Stack*)malloc(sizeof(Stack));
+	Stack *operators = (pStack)malloc(sizeof(Stack));
 	init(operators, n);
 	scanf("%s", buffer);
 	int i = 0;

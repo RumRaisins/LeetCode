@@ -1,5 +1,6 @@
 #include<iostream>
 #include<vector>
+
 using namespace std;
 void qSort(vector<int>& vec,int i,int j) {
 	if (j - i <= 1)return;
@@ -22,6 +23,21 @@ void qSort(vector<int>& vec,int i,int j) {
 	qSort(vec, x, i);
 	qSort(vec, i + 1, y);
 	return;
+}
+
+void qSort(int* data, int left, int right) {
+	while (left < right) {
+		int piv = data[left], low = left, high = right;
+		while (low < high) {
+			while (low < high && data[high] > piv) --high;
+			if(low < high) data[low++] = data[high];
+			while (low < high && data[low] < piv)++low;
+			if (low < high) data[high--] = data[low];
+		}
+		data[low] = piv;
+		qSort(data, low + 1, right);
+		right = low  - 1;
+	}
 }
 
 int main() {

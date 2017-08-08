@@ -24,5 +24,23 @@
     <ClCompile Include="219_nums[i] = nums[k-i].cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="..\260_孤独数3\260_孤独数3.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="202_happuNumber.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="237_给一个节点删除它.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="234_回文链表.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="225_队列模拟栈.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="232_ 用栈模拟队列.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

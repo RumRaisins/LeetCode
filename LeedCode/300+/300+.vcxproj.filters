@@ -15,10 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="运算表达式（栈）.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="逆波兰式的转化与计算.cpp">
+    <ClCompile Include="377_组合数4.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

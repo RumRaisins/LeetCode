@@ -19,9 +19,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{48C0875E-C8CA-45C1-877E-AE0B7B5D8AF4}</ProjectGuid>
+    <ProjectGuid>{26807C0B-9CC9-4454-85D2-12F6B62CB711}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>！！！栈！！！</RootNamespace>
+    <RootNamespace>My300</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -142,10 +142,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="运算表达式（栈）.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="逆波兰式的转化与计算.cpp" />
+    <ClCompile Include="377_组合数4.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

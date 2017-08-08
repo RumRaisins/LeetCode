@@ -39,6 +39,15 @@
     <ClCompile Include="38数上一位的数字数.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="..\9_判断回文数\9_判断回文数.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\7_整数翻转\7_整数翻转.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="19_删除倒数的链表.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Head.h">
