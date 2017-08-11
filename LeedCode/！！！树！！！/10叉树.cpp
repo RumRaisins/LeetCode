@@ -8,7 +8,7 @@
 
 typedef struct Tree {
 	char data;
-	struct Tree* rchild, *lchild;
+	struct Tree **child;
 }Tree, *pTree;
 
 typedef struct Stack {
@@ -46,17 +46,20 @@ int empty(pStack s) {
 
 
 pTree init(char data) {
-	pTree root = new Tree;
+	pTree root = (pTree)malloc(sizeof(Tree));
 	root->data = data;
-	root->lchild = root->rchild = NULL;
+	root->child = (pTree*)malloc(sizeof(pTree) * 10);
+	for (int i = 0; i < 10; ++i) {
+		root->child[i] = NULL;
+	}
 	return root;
 }
 
 pTree buildTree(char* str) {
 	pTree p = NULL;
-	Stack *stack;
+	Stack *stack =(pStack)malloc(sizeof(Stack));
 	init_stack(stack, strlen(str));
-	int k = 0 ; //0为左孩子，1为右孩子
+	int k = 0; 
 	while (str[0]) {
 		switch (str[0])
 		{
@@ -71,7 +74,7 @@ pTree buildTree(char* str) {
 			}
 			break;
 		case ',':
-			k = 1;
+			k++;
 			if (NULL != p) {
 				pop(stack);
 				p = NULL;
@@ -79,11 +82,8 @@ pTree buildTree(char* str) {
 			break;
 		default:
 			p = init(str[0]);
-			if (!empty(stack) && k == 0) {
-				top(stack)->rchild = p;
-			}
-			else if (!empty(stack) && k == 1) {
-				top(stack)->lchild = p;
+			if (!empty(stack) ) {
+				top(stack)->child[k] = p;
 			}
 			push(stack, p);
 			break;
@@ -96,64 +96,23 @@ pTree buildTree(char* str) {
 	return p;
 }
 
-pTree buildTree(char* str) {
-	int len = strlen(str);
-	pStack stack = (pStack)malloc(sizeof(Stack));
-	init_stack(stack, len);
-	pTree p, last_p;
-	p = init(str[0]);
-	last_p = p;
-	int rchild_flag = 0;
-	++str;
-	while (str[0]) {
-		switch (str[0]) {
-		case '(':
-			push(stack, p);
-			p = NULL;
-			break;
-		case ')':
-			top(stack)->rchild = p;
-			p = top(stack);
-			last_p = p;
-			pop(stack);
-			break;
-		case ',':
-			top(stack)->lchild = p;
-			p = NULL;
-			break;
-		default:
-			p = init(str[0]);
-			break;
-		}
-		++str;
-	}
-	if (!empty(stack)) {
-		last_p = top(stack);
-	}
-	free(stack->data);
-	free(stack);
-	return last_p;
-}
-
-void Sequencetable(pTree root,char target) {
-	if (root->data == target || !root) {
-		return;
-	}
-	if (root->data == 0) {
+void Sequencetable(pTree root) {
+	if (!root) {
 		return;
 	}
 	printf("%c", root->data);
-	if ((root->lchild == NULL || root->lchild->data == target) &&
-		(root->rchild == NULL || root ->rchild->data == target)) {
-		return;
-	}
+	//if (root->child == NULL ) {
+	//	return;
+	//}
 	printf("(");
-	if (root->lchild && root->lchild->data != target) {
-		Sequencetable(root->lchild, target);
+	if (NULL != root->child[0]) {
+		Sequencetable(root->child[0]);
 	}
-	if (root->rchild && root->rchild->data != target) {
-		printf(",");
-		Sequencetable(root->rchild, target);
+	for (int i = 1; i < 10; ++i) {
+		if (NULL != root->child[i]) {
+			printf(",");
+			Sequencetable(root->child[i]);
+		}
 	}
 	printf(")");
 	return;
@@ -161,10 +120,12 @@ void Sequencetable(pTree root,char target) {
 
 
 void clear(pTree root) {
-	if (root->lchild)
-		clear(root->lchild);
-	if (root->rchild)
-		clear(root->rchild);
+	if (!root) return;
+	for (int i = 0; i < 10; ++i) {
+		if (&root->child[i]) {
+			clear(root->child[i]);
+		}
+	}
 	delete root;
 }
 
@@ -172,22 +133,17 @@ void clear(pTree root) {
 
 
 int main() {
-	char p[30],target,temp;
+	char p[30], target, temp;
 	int index = 0;
 	p[0] = '\0';
 	while (scanf("%c", &temp)) {
 		if (temp == '\n')break;
 		p[index++] = temp;
 	}
-	scanf("%c", &target); 
+	p[index] = '\0';
 	pTree root = buildTree(p);
-	Sequencetable(root, target);
-	
-
-
+	Sequencetable(root);
 	clear(root);
-
-
 	system("pause");
 	return 0;
 }

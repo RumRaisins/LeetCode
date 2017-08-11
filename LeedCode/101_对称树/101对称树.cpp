@@ -20,7 +20,7 @@ using namespace std;
 	
 		 bool isSameTree(TreeNode* p, TreeNode* q) {
 			 if ((!p && p) || (p && !q) || (!p && !q)) return false;
-			 return twoNodeSame(p->right, q->right) && (p->left, q->left));
+			 return twoNodeSame(p->right, q->right) && (p->left, q->left);
 		 }
 	 
  };

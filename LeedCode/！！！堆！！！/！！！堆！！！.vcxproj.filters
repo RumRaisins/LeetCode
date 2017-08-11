@@ -15,37 +15,16 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\101_对称树\101对称树.cpp">
+    <ClCompile Include="大根堆.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="..\191_比特统计\191_比特统计.cpp">
+    <ClCompile Include="选择最大和次打求和塞回去.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="..\190_比特翻转\190_比特翻转.cpp">
+    <ClCompile Include="堆排序.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="..\136_孤独数1\136_孤独数1.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="..\107_层序遍历\107_zhenVector.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="..\107_层序遍历\107_层序遍历.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="160_两链表的公共节点.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="102_层序遍历.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="104_二叉树最大深度.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="112_二叉树路径和.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="二叉树最小深度.cpp">
+    <ClCompile Include="源.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

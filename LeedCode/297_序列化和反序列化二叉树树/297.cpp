@@ -36,7 +36,7 @@ public:
 private:
 	int findcomma(string& data) {
 		int pos = data.find(',');
-		int val = stoi(data.substr(0, pos));
+		int val = stoi(data.substr(0, pos).c_str());
 		data = data.substr(pos+1);
 		return val;
 	}

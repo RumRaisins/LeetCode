@@ -26,8 +26,10 @@ void qSort(vector<int>& vec,int i,int j) {
 }
 
 void qSort(int* data, int left, int right) {
+	int low, high;
 	while (left < right) {
-		int piv = data[left], low = left, high = right;
+		int piv = data[left];
+		low = left, high = right;
 		while (low < high) {
 			while (low < high && data[high] > piv) --high;
 			if(low < high) data[low++] = data[high];
