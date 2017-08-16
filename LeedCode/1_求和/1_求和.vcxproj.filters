@@ -48,6 +48,12 @@
     <ClCompile Include="19_删除倒数的链表.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="3_最长无重复子串.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="35_在数组中找到一个数或他插入的位置.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Head.h">

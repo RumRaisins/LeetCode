@@ -148,12 +148,17 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="..\217_包含重复\217_包含重复.cpp" />
+    <ClCompile Include="..\231_二的幂次数\231_2的幂次数.cpp" />
     <ClCompile Include="..\260_孤独数3\260_孤独数3.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="..\278_错误版本\278错误版本.cpp" />
+    <ClCompile Include="..\297_序列化和反序列化二叉树树\297_序列化和反序列化二叉树.cpp" />
     <ClCompile Include="202_happuNumber.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="217_数组数字是否重复.cpp" />
     <ClCompile Include="219_nums[i] = nums[k-i].cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>

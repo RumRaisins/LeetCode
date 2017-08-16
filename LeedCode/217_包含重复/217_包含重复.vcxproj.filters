@@ -15,9 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="217.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="利用set（红黑树）.cpp">
       <Filter>源文件</Filter>
     </ClCompile>

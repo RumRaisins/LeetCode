@@ -22,8 +22,8 @@ void swap(Zombie *a, Zombie *b) {
 	*b = temp;
 }
 int compare(Zombie a, Zombie b) {
-	if (a.si > b.si) return 1;
-	if (a.si == b.si && a.num > b.num)return 1;
+	if (a.first > b.first) return 1;
+	if (a.first == b.first && a.num < b.num)return 1;
 	return 0;
 }
 
@@ -34,8 +34,8 @@ void push(Heap *h, Zombie value) {
 	int father = (current - 1) / 2;
 	while (compare(h->data[current] , h->data[father])) {
 		swap(&h->data[current], &h->data[father]);
-			current = father;
-			father = (current - 1) / 2;
+		current = father;
+		father = (current - 1) / 2;
 	}
 	++h->size;
 }
@@ -52,23 +52,17 @@ void update(Heap *h, int pos, int n) {
 	if (rchild < n &&  compare(h->data[rchild], h->data[max_value])) {
 		max_value = rchild;
 	}
-	if (max_value ^ pos) {
+	if (max_value != pos) {
 		swap(&h->data[max_value], &h->data[pos]);
 		update(h, max_value, n);
 	}
 }
 
 void pop(Heap *h) {
+	if (!h->size) return;
 	swap(&h->data[h->size - 1], &h->data[0]);
 	--h->size;
 	update(h, 0, h->size);
-}
-
-void heap_sort(Heap *h) {
-	for (int i = h->size - 1; i > 0; --i) {
-		swap(&h->data[i], &h->data[0]);
-		update(h, 0, i);
-	}
 }
 
 void clear(Heap *h) {
@@ -80,39 +74,54 @@ void clear(Heap *h) {
 int main() {
 	int n;
 	scanf("%d", &n);
-	Heap** heap = (Heap**)malloc(sizeof(Heap*) * 100);
+	int count = 1;
+	Heap** heap = (Heap**)malloc(sizeof(Heap*) * 101);
+	for (int i = 0; i <= 100; ++i) {
+		heap[i] = (Heap*)malloc(sizeof(Heap));
+		init(heap[i], 50000);
+	}
 	while (n--) {
-		for (int i = 0; i < 100; ++i) {
-			heap[i] = NULL;
-		}
+		printf("Case #%d:\n", count++);	
 		int m;
 		scanf("%d", &m);
 		int index = 1;
-		while (m--) {
+		for(int i = 0 ; i < m; ++i){
 			Zombie temp;
 			scanf("%d %d", &temp.first, &temp.si);
 			temp.num = index++;
-			heap[temp.si] = (Heap*)malloc(sizeof(Heap));
-			init(heap[temp.si], 100);
 			push(heap[temp.si], temp);
 		}
-		index--;
-		while (index--) {
-			int max = 0 , max_first = 0;
-			for (int i = 0; i < 100 && heap[i] != NULL; ++i) {
-				if (top(heap[i]).first > max_first) {
-					max = i;
-					max_first = top(heap[i]).first;
+		//i是第i秒
+		for(int i = 0 ; i < m ;++i){
+			int max_index = -1;
+			Zombie zombie1, zombie2;
+			//j里面存的是Si
+			for (int j = 1; j <= 100; ++j) {
+				if (heap[j]->size == 0)continue;
+				if (max_index == -1) {
+					max_index = j;
+					continue;
+				}
+				zombie1 = top(heap[j]);
+				zombie2 = top(heap[max_index]);
+				zombie1.first += i * j;
+				zombie2.first += i * max_index;
+				if (compare(zombie1, zombie2)) {
+					max_index = j;
 				}
 			}
-			printf("%d ", top(heap[max]).num);
-			pop(heap[max]);
+			printf("%d", top(heap[max_index]).num);
+			pop(heap[max_index]);
+			if (i != m - 1) {
+				printf(" ");
+			}
 		}
 		printf("\n");
-		for (int i = 0; i < 100; ++i) {
-			clear(heap[i]);
-		}
 	}
+	for (int i = 0; i <= 100; ++i) {
+		clear(heap[i]);
+	}
+	free(heap);
 
 	system("pause");
 	return 0;
