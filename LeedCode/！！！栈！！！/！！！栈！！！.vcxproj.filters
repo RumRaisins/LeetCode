@@ -21,5 +21,11 @@
     <ClCompile Include="逆波兰式的转化与计算.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="二叉树的某节点的先祖.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="C的任意类型栈.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

@@ -15,31 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="shifr_and.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Shift_and.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="KMP.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="shift_and_long.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Trie树.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Sunday.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="AC自动机.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="双数组字典树.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="AC自动机2.cpp">
+    <ClCompile Include="矩阵查找数字.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

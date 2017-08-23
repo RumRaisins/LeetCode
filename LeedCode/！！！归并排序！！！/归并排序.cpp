@@ -2,35 +2,35 @@
 #include<vector>;
 using namespace std;
 
-void mergeSort(vector<int>& vec,int i ,int j,vector<int>& copy) {
-	if (j - i <= 1) 
+void mergeSort(vector<int>& vec,int left ,int right,vector<int>& copy) {
+	if (right - left <= 1) 
 		return;
-	if (j - i == 2) {
-		if (vec[i] > vec[i+1]) {
-			int temp = vec[i];
-			vec[i] = vec[i+1];
-			vec[i+1] = temp;		
+	if (right - left == 2) {
+		if (vec[left] > vec[left+1]) {
+			int temp = vec[left];
+			vec[left] = vec[left + 1];
+			vec[left + 1] = temp;		
 		}
 		return;
 	}
-	int p2 = (i + j) >> 1;
-	int p1 = i, p3 = p2, p4 = 0;
-	mergeSort(vec, i, p2 , copy);
-	mergeSort(vec, p2 , j, copy);	
-	while (p1 < p2 || p3 < j) {
-		if (p1 == p2) {
-			copy[p4++] = vec[p3++];
+	int mid = (left + right) >> 1;
+	int low = left, high = mid, index = 0;
+	mergeSort(vec, left, mid , copy);
+	mergeSort(vec, mid , right, copy);	
+	while (low < mid || high < right) {
+		if (low == mid) {
+			copy[index++] = vec[high++];
 			continue;
 		}
-		if (p3 == j) {
-			copy[p4++] = vec[p1++];
+		if (high == right) {
+			copy[index++] = vec[low++];
 			continue;
 		}
-		vec[p1] > vec[p3] ? copy[p4++] = vec[p3++] : copy[p4++] = vec[p1++];
+		vec[low] > vec[high] ? copy[index++] = vec[high++] : copy[index++] = vec[low++];
 	}
-	for (int k=0 ; k < p4; k++)
+	for (int k=0 ; k < index; k++)
 	{
-		vec[i+k] = copy[k];
+		vec[left + k] = copy[k];
 	}
 	return;
 }
