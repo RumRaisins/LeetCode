@@ -1,5 +1,10 @@
 #include <iostream>
-using namespace std;
+#include <vector>
+using std::cout;
+using std::cin;
+using std::endl;
+using std::vector;
+
 
 int quick_select(int *nums, int left, int right, int k) {
 	int l, r, piv;
@@ -30,31 +35,43 @@ void clear(int *p, int *p1) {
 	}
 }
 
+int quick_sort(vector<int>& vec, int left, int right, int k) {
+	for (int c : vec) {
+		cout << c << " ";
+	}
+	int l, r, piv;
+	while (left <= right) {
+		l = left, r = right, piv = vec.at(left);
+		while (l < r) {
+			while (l < r && vec.at(r) > piv) --r;
+			if (l < r) vec.at(l++) = vec.at(r);
+			while (l < r && vec.at(l) < piv) ++l;
+			if (l < r) vec.at(r--) = vec.at(l);
+		}
+		vec.at(l) = piv;
+		if (l > k - 1) {
+			right = l - 1;
+		}
+		else if (l < k - 1) {
+			left = l + 1;
+		}
+		else {
+			return vec[l];
+		}
+	}
+}
 int main() {
-	int p1[10] = { 6 ,10 ,13 ,45 ,2 ,6 ,34 ,76 ,3 ,25 };
-	int p[10];
-	clear(p, p1);
-	cout << quick_select(p, 0, 9 ,1) << endl;
-	clear(p, p1);
-	cout << quick_select(p, 0, 9, 2) << endl;
-	clear(p, p1);
-	cout << quick_select(p, 0, 9, 3) << endl;
-	clear(p, p1);
-	cout << quick_select(p, 0, 9, 4) << endl;
-	clear(p, p1);
-	cout << quick_select(p, 0, 9, 5) << endl;
-	clear(p, p1);
-	cout << quick_select(p, 0, 9, 6) << endl;
-	clear(p, p1);
-	cout << quick_select(p, 0, 9, 7) << endl;
-	clear(p, p1);
-	cout << quick_select(p, 0, 9, 8) << endl;
-	clear(p, p1);
-	cout << quick_select(p, 0, 9, 9) << endl;
-	clear(p, p1);
-	cout << quick_select(p, 0, 9, 10) << endl;
-	//cout << p[0] << endl;
-
+	vector<int> vec;
+	int n;
+	char enter;
+	while (cin >> n) {
+		vec.push_back(n);
+	
+	}
+	
+	//int k;
+	//cin >> k;
+	cout << quick_sort(vec, 0, vec.size() - 2 , vec.size() - n) << endl;
 	system("pause");
 	return 0;
 

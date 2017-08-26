@@ -18,5 +18,17 @@
     <ClCompile Include="矩阵查找数字.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="字符串数量.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="字符·旋转矩阵.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="子串匹配.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="归并_逆序对.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

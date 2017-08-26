@@ -15,19 +15,25 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="源.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="循环链表.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="交集.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="源1.cpp">
+    <ClCompile Include="循环队列.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="循环队列.cpp">
+    <ClCompile Include="链表快排序.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="链表求环，求柄.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="单链表转双向链表.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="本体.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

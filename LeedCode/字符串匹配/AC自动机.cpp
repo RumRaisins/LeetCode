@@ -67,6 +67,7 @@ void match_build(Trie root ) {
 	}
 }
 
+
 void match(Trie root, char *buffer ) {
 	Trie p = root;
 	for (int i = 0; buffer[i]; ++i) {
@@ -126,7 +127,7 @@ int match2(Trie root, char *buffer1, char *buffer2) {
 }
 void build_automaton(Trie root) {
 	root->fail = root;
-	TrieNode *q[MAX_LEN];
+	Trie q[MAX_LEN];
 	int l = 0, r = 0;
 	q[r++] = root;
 	while (l < r) {
