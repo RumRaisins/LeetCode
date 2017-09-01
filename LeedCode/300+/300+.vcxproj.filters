@@ -18,5 +18,40 @@
     <ClCompile Include="377_组合数4.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="..\338_比特统计\338_比特统计.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\342_四的幂次数\342_四的幂次数.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\371_模拟加法\371_模拟加法.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\378_矩阵第K小\378_矩阵第K小.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\389_不同的字符\389_不同的字符.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="349_两数组的不重复交集.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="344_逆序字符串.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="345_翻转元音字符串.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="383_字符串匹配吗？？.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="387_首个无重复字符.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ch.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

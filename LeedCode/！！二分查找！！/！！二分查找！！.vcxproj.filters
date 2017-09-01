@@ -24,5 +24,11 @@
     <ClCompile Include="000001111111找第一个1.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="双数组查找第K大.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="三数较小和.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

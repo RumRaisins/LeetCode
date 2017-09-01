@@ -27,5 +27,11 @@
     <ClCompile Include="C的任意类型栈.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="浏览器.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="栈中最小元素.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

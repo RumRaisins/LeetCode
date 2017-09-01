@@ -48,5 +48,32 @@
     <ClCompile Include="257_输出路径.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="..\217_包含重复\217_包含重复.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\231_二的幂次数\231_2的幂次数.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\278_错误版本\278错误版本.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\297_序列化和反序列化二叉树树\297_序列化和反序列化二叉树.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="217_数组数字是否重复.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="235_二叉搜索树的最低公公先祖.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="205_镜像字符串.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="242_变形字符串.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="290_是否符合模式串.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

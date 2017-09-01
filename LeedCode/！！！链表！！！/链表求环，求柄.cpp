@@ -8,22 +8,18 @@ typedef struct Node {
 
 
 int linkedListCycleLength(ListNode *head) {
-	if (!head) return 0;
 	ListNode *slow = head;
-	ListNode *first = head->next;
-	if (!first) return 0;
-	first = first->next;
+	ListNode *first = head;
 	int count = 0, flag = 0;
-	while (first != NULL) {
+	while (first && first->next) {
+		first = first->next;
+		first = first->next;
+		slow = slow->next;
 		if (first == slow) {
 			if (flag) return count - 1;
 			flag = 1;
 			++count;
 		}
-		first = first->next;
-		if (!first) return 0;
-		first = first->next;
-		slow = slow->next;
 		if (count)++count;
 	}
 	return 0;

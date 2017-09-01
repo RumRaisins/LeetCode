@@ -11,13 +11,13 @@ int marge_sort(int *num, int left, int right) {
 	sum += marge_sort(num, mid, right);
 	int l = left, r = mid, index = 0;
 	int *temp = (int *)malloc((right - left + 1) * sizeof(int));
-	while (l < mid && r < right) {
+	/*while (l < mid && r < right) {
 		while (l < mid && num[l] <= 3 * num[r]) {
 			++l;
 		}
 		sum += (mid - l);
 		++r;
-	}
+	}*/
 	l = left, r = mid;
 	while (l < mid || r < right) {
 		if (l == mid) {
@@ -28,10 +28,10 @@ int marge_sort(int *num, int left, int right) {
 			temp[index++] = num[l++];
 			continue;
 		}
-		/*if (num[l] >  num[r]) {
+		if (num[l] >  num[r]) {
 			printf("%d >  %d\n", num[l], num[r]);
 			sum += mid - l;
-		}*/
+		}
 		temp[index++] = num[l] > num[r] ? num[r++] : num[l++];
 	}
 	for (int i = 0; i < index; ++i) {
