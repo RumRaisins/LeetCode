@@ -8,13 +8,13 @@ int binary_search(int *data, int n, int target) {
 	while (l < r) {
 		mid = (l + r ) >> 1;
 		printf(" l:%d(%d)  mid%d:(%d) r:%d(%d)\n", data[l], l, data[mid], mid, data[r], r);
-		if (data[mid] == target) {
-			r = mid;   
-			//我只关心找到的Mid是不是我想要的
-			//此种情况可能是我想要的，我想要的前面的1，所以让尾 = mid
-		}
-		else if (data[mid] > target) {
-			r = mid - 1;
+		//if (data[mid] == target) {
+		//	r = mid;   
+		//	//我只关心找到的Mid是不是我想要的
+		//	//此种情况可能是我想要的，我想要的前面的1，所以让尾 = mid
+		//}
+		if (data[mid] >= target) {
+			r = mid;
 		}
 		else {
 			l = mid + 1;

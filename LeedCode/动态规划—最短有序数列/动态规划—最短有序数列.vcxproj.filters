@@ -54,5 +54,14 @@
     <ClCompile Include="91_数字编码有多少种.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="最长不上升子序列.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="迷宫得分最大.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="174_龙与地下城.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
