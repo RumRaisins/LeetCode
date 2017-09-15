@@ -39,5 +39,14 @@
     <ClCompile Include="2.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="模板类.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="test.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="给你2个2的幂次数——有多少种组成N的方式.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

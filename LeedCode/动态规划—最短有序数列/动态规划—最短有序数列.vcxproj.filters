@@ -63,5 +63,26 @@
     <ClCompile Include="174_龙与地下城.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="墙壁涂色.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="逃生（血量最大）.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="最长公共子序列.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="最长公共子串.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="最长上升公共子序列.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="添加多好个字符后是回文串.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="背包问题.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
