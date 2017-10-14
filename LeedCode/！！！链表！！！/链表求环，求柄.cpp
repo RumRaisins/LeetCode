@@ -15,7 +15,7 @@ int linkedListCycleLength(ListNode *head) {
 		first = first->next;
 		first = first->next;
 		slow = slow->next;
-		if (first == slow) {
+		if (first == slow){
 			if (flag) return count - 1;
 			flag = 1;
 			++count;

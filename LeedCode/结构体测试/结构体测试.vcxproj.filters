@@ -15,25 +15,8 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Hash.cpp">
+    <ClCompile Include="struct.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="课堂.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="拉链法测试.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="HashTest.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="23.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="拉链法.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
   </ItemGroup>
 </Project>

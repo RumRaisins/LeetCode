@@ -48,5 +48,17 @@
     <ClCompile Include="给你2个2的幂次数——有多少种组成N的方式.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="数组第K大不能改变顺序.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="0123101213等等找第N位.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="N个同学赛跑，允许重复，有多少种结果.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="引用.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

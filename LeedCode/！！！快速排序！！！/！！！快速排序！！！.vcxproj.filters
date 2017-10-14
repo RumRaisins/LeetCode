@@ -24,5 +24,8 @@
     <ClCompile Include="双指针（三数之和）.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="优化的快拍.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
