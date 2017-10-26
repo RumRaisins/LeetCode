@@ -60,5 +60,29 @@
     <ClCompile Include="引用.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="左值与右值.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="用递归将栈逆序.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="菱形继承测试.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="浅拷贝.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="计算考试平均成绩.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="t.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="背包问题.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ll.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

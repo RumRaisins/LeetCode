@@ -15,25 +15,39 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="运算表达式（栈）.cpp">
+    <ClInclude Include="Expr.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Parser.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Visitor.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="handler.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="utility.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Expr.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="逆波兰式的转化与计算.cpp">
+    <ClCompile Include="Parser.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="二叉树的某节点的先祖.cpp">
+    <ClCompile Include="Visitor.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="C的任意类型栈.cpp">
+    <ClCompile Include="handler.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="浏览器.cpp">
+    <ClCompile Include="main.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="栈中最小元素.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="四则表达式求值.cpp">
+    <ClCompile Include="utility.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

@@ -15,25 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="运算表达式（栈）.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="逆波兰式的转化与计算.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="二叉树的某节点的先祖.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="C的任意类型栈.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="浏览器.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="栈中最小元素.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="四则表达式求值.cpp">
+    <ClCompile Include="源.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
