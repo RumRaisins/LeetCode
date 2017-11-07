@@ -19,7 +19,7 @@ public:
 			y = (l2 == NULL) ? 0 : l2->val;
 			sum = x + y + acc;
 			acc = (sum >= 10 ? 1 : 0);
-			list->next = new ListNode(sum - 10);
+			list->next = new ListNode(sum % 10);
 			list = list->next;
 			if (NULL != l1)l1 = l1->next;
 			if (NULL != l2)l2 = l2->next;

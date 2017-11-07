@@ -60,7 +60,7 @@ namespace haizei {
 		}
 		Node<VALUE_T> &operator [] (const KEY_T &key) {
 			int index = this->__find(key);
-			while (__sync_lock_test_and_set(&bit[index], 1)) {}
+			//while (__sync_lock_test_and_set(&bit[index], 1)) {}
 			this->__data[index].first = key;
 			this->__map[index] = true;
 			bit[index] = 0;
@@ -80,7 +80,7 @@ namespace haizei {
 		int __size;
 		pair<KEY_T, Node<VALUE_T> > *__data;
 		bool *__map;
-		//bitset<100> bit;
+		bitset<100> bit;
 		short *bit;
 		HashFunc_T __hash_func;
 		Node<VALUE_T> *__end;

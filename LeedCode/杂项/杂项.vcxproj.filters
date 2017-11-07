@@ -42,9 +42,6 @@
     <ClCompile Include="模板类.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="test.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="给你2个2的幂次数——有多少种组成N的方式.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
@@ -69,19 +66,13 @@
     <ClCompile Include="菱形继承测试.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="浅拷贝.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="计算考试平均成绩.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="t.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="背包问题.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="ll.cpp">
+    <ClCompile Include="二进制位1的个数.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

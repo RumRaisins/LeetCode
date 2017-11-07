@@ -90,6 +90,9 @@
     <ClCompile Include="69_sqrt.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="水沟积水问题.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Head.h">

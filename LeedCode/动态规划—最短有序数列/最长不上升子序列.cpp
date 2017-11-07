@@ -8,7 +8,7 @@ int binary_search(const vector<int> &nums, int target) {
 	int head, tail, mid;
 	head = 0, tail = nums.size() - 1;
 	while (head < tail) {
-		mid = (head + tail) >> 1;
+		mid = (head + tail) / 2;
 		if (nums[mid]  < target) {
 			tail = mid;
 		}

@@ -16,29 +16,31 @@
 typedef struct Node {
 	int flag;
 	struct Node *next[26];
+	struct Node *fail;
+	struct Node *father;
+	int index;
 } Node;
 
 typedef struct DANode {
-	int base, check;
+	int base, check, fail;
 } DANode;
 
 Node *get_new_node() {
 	Node *p = CC(Node, 1);
 	return p;
-}
-int insert(Node *tree, char *str) {
+};
+
+void insert(Node *tree, char *str) {
 	Node *p = tree;
-	int cnt = 0;
+
 	while (str[0]) {
 		if (p->next[str[0] - 'a'] == NULL) {
-			cnt++;
 			p->next[str[0] - 'a'] = get_new_node();
 		}
 		p = p->next[str[0] - 'a'];
 		str++;
 	}
 	p->flag = 1;
-	return cnt;
 }
 
 void output(Node *tree, int ind, char *str) {
@@ -89,45 +91,45 @@ int trie_transfer_da(Node *tree, int index, DANode *da_tree) {
 		if (tree->next[i] == NULL) continue;
 		da_tree[base + i].base = get_base_value(tree->next[i], da_tree);
 		temp = trie_transfer_da(tree->next[i], base + i, da_tree);
-		if (temp > max_index) max_index = temp;
+		if (temp > max_index) max_index =	temp;
 	}
 	return max_index;
 }
 Node *__get_automaton_fail(Node *father, int index, Node *root) {
 	if (father == root) return root;
-	if (father == NULL) {
+	if (father->fail == NULL) {
 		father->fail = __get_automaton_fail(father->father, father->index, root);
 	}
-	if (NULL != father->fail->next[index]) {
+	if (father->fail->next[index] != NULL) {
 		return father->fail->next[index];
 	}
 	return __get_automaton_fail(father->fail, index, root);
 }
 
-void __build_automaton(DNode *tree, DNode *root) {
-	for (int i = 0; i < SIZE; ++i) {
-		if (tree->next[i] == NULL) continue;
-		tree->next[i]->fail = __get_automaton_fail(tree, i, root);
-		__build_automaton(tree->next[i], root);
+void __build_automaton(Node *node, Node *root) {
+	for (int i = 0; i < 26; i++) {
+		if (node->next[i] == NULL) continue;
+		node->next[i]->fail = __get_automaton_fail(node, i, root);
+		__build_automaton(node->next[i], root);
 	}
-}
-void build_automaton(DNode *tree) {
-	__build_automaton(tree, tree);
+	return;
 }
 
 int main() {
 	Node *tree = get_new_node();
-	int n, node_cnt = 1;
+	int n;
 	char str[100];
 	scanf("%d", &n);
 	for (int i = 0; i < n; i++) {
 		scanf("%s", str);
-		node_cnt += insert(tree, str);
+		insert(tree, str);
 	}
-	DANode *da_tree = CC(DANode, node_cnt * 26);
+
+	DANode *da_tree = CC(DANode, 1000 * 26);
+
+
 	da_tree[1].base = 2;
 	int max_index = trie_transfer_da(tree, 1, da_tree);
-	build_automaton(tree);
 	//printf("trie : %lu Byte\n", node_cnt * sizeof(Node));
 	//printf("double array trie : %lu Byte\n", max_index * sizeof(DANode));
 	//for (int i = 1; i <= max_index; i++) {
@@ -137,6 +139,6 @@ int main() {
 	//	}
 	//}
 	output(tree, 0, str);
-	clear(tree);
+	//clear(tree);
 	return 0;
 }

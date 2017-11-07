@@ -32,7 +32,6 @@ int quick_select(int *num, int n) {
 	} while (x <= y);
 	return y;
 }
-
 void quick_sort(int *num, int left, int right) {
 	while (right - left >= 1) {
 		int x;
@@ -42,6 +41,31 @@ void quick_sort(int *num, int left, int right) {
 	}
 	return;
 }
+
+void quick_sort2(int *num, int left, int right) {
+	while (right - left >= 1) {
+		int temp_x;
+		int x = 0, y = right - left - 1;
+		int z = num[rand() % right - left - 1];
+		do {
+			while (num[x] < z) x++;
+			while (num[y] > z) y--;
+			if (x <= y) {
+				if (x != y) {
+					num[x] ^= num[y];
+					num[y] ^= num[x];
+					num[x] ^= num[y];
+				}
+				x++, y--;
+			}
+		} while (x <= y);
+		y +=  left;
+		quick_sort(num, y + 1, right);
+		right = y;
+	}
+	return;
+}
+
 
 void *thread_quick_sort(void *arg) {
 	QuickSortArg *r_arg = (QuickSortArg *)arg;

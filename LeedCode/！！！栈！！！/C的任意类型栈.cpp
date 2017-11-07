@@ -191,7 +191,7 @@ int qsort2(int *data, int l, int r) {
 //¹é²¢ÅÅÐòµÄ·ÇµÝ¹é
 void merge_sort(int *data, int left, int right, int *temp) {
 	if( right < left ) return ;
-	int mid = (left + right) >> 1, index = 0;
+	int mid = (left + right) / 2, index = 0;
 	int low = left, high = mid;
 	merge_sort(data ,  left , mid ,temp);
 	merge_sort(data , mid ,right ,temp);
@@ -211,7 +211,7 @@ void merge_sort(int *data, int left, int right, int *temp) {
 }
 void merge_sort2(int *data, int l, int r) {
 	if (l == r) return;
-	int mid = (l + r) >> 1;
+	int mid = (l + r) / 2;
 	merge_sort2(data, l, mid);
 	merge_sort2(data, mid + 1, r);
 	int *temp = (int*)malloc(sizeof(int) * (r - l + 1));
@@ -238,7 +238,7 @@ void init_MergeNode(MergeNode *p, int *data, int l, int r, int *temp) {
 	p->temp = temp;
 	p->l = l;
 	p->r = r;
-	p->mid = (l + r) >> 1;
+	p->mid = (l + r) / 2;
 	p->status = 0;
 }
 void noStackMergeSort(int *data, int l, int r, int*temp) {

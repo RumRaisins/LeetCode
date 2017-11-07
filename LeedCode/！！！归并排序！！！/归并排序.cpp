@@ -13,7 +13,7 @@ void mergeSort(vector<int>& vec,int left ,int right,vector<int>& copy) {
 		}
 		return;
 	}
-	int mid = (left + right) >> 1;
+	int mid = (left + right) / 2;
 	int low = left, high = mid, index = 0;
 	mergeSort(vec, left, mid , copy);
 	mergeSort(vec, mid , right, copy);	

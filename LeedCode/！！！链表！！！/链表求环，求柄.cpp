@@ -12,8 +12,7 @@ int linkedListCycleLength(ListNode *head) {
 	ListNode *first = head;
 	int count = 0, flag = 0;
 	while (first && first->next) {
-		first = first->next;
-		first = first->next;
+		first = first->next->next;
 		slow = slow->next;
 		if (first == slow){
 			if (flag) return count - 1;
@@ -22,11 +21,11 @@ int linkedListCycleLength(ListNode *head) {
 		}
 		if (count)++count;
 	}
-	return 0;
+	return -1;
 }
 ListNode* linkedListCycleLinkedNode(ListNode *head) {
 	int count = linkedListCycleLength(head);
-	if (!count) return NULL;
+	if (count < 0) return NULL;
 	ListNode *first = head, *slow = head;
 	while (count--) {
 		first = first->next;

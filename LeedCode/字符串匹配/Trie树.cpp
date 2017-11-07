@@ -87,8 +87,6 @@ typedef struct Node {
 	struct Node *next[SIZE];
 }Node;
 
-
-
 Node *get_new_node() {
 	Node *p = MC(Node, 1);
 	for (int i = 0; i < SIZE; ++i) {
@@ -130,6 +128,7 @@ typedef struct outNode {
 	char *s;
 	int status , loc , i;
 }outNode;
+
 outNode *init_outNode(outNode *p ,Node *root, char *str, int loc) {
 	p->root = root;
 	p->loc = loc;

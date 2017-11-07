@@ -26,7 +26,7 @@ struct Test<T(ARGS...)>
 
 };
 template<typename T ,typename U>
-typename conditional<(sizeof(T) > sizeof(U)), T, U>::type 
+typename conditional<(sizeof(T) >sizeof(U)), T, U>::type 
 add(T a, U b) {
 	return a + b;
 }
@@ -54,7 +54,7 @@ int main() {
 	
 	//Test<int(int,int)> t;
 	//cout << t(2, 3);
-	//cout << add(1.23, 23);
+	cout << add(1.23, 23);
 	print("sdasd", 25, 25.5, 5,"fddfsdf");
 
 	system("pause");

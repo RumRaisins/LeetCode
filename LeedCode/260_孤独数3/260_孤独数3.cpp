@@ -11,7 +11,7 @@ public:
 		int r = accumulate(nums.begin(), nums.end(), 0, bit_xor<int>());
 		vector<int> s = { 0,0 };
 		int num = 0, num2 = r;
-		r = ((r ^ r - 1) >> 1) + 1;
+		r = ((r ^ r - 1) / 2) + 1;
 		for (int c : nums) {
 			if (r&c)
 				s[0] ^= c;

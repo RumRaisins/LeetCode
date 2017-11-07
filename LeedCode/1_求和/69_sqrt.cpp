@@ -7,7 +7,7 @@ public:
 		if (x == 0) return 0;
 		int l = 1, r = x, mid, mid2;
 		while (l < r) {
-			mid = l + ((r - l) >> 1) + 1;
+			mid = l + ((r - l) / 2) + 1;
 			if (mid <= x / mid) {
 				l = mid;
 				cout << l << endl;

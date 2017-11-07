@@ -9,7 +9,7 @@ public:
 		if (target > nums[nums.size() - 1]) return nums.size();
 		int head = 0, tail = nums.size() - 1, mid;
 		while (head < tail) {
-			mid = (head + tail + 1) >> 1;
+			mid = (head + tail + 1) / 2;
 			if (nums[mid] == target) {
 				return mid;
 			}

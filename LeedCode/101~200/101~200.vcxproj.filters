@@ -54,5 +54,11 @@
     <ClCompile Include="125_回文字符串.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="200_独立岛问题.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="120_最长的连续子序列.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

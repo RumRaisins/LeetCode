@@ -6,7 +6,7 @@ using namespace std;
 int binary_search(int *data, int n , int target) {
 	int l = 0, r = n - 1, mid;
 	while (l <= n) {
-		mid = (l + r) >> 1;
+		mid = (l + r) / 2;
 		if (data[mid] == target) {
 			return mid;
 		}

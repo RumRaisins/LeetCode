@@ -198,6 +198,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="69_sqrt.cpp" />
+    <ClCompile Include="水沟积水问题.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Head.h" />

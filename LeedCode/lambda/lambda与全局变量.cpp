@@ -12,11 +12,14 @@
 using namespace std;
 
 
+function<int(auto)> test = [](auto a) {
+
+};
 
 int main()
 {
 	//->int 代表返回值为int
-	function<int(int)> fib = [&fib](int i) ->int {
+	function<int(int)> fib = [&fib](int i)  {
 		if (i < 2) {
 			return 1;
 		}
@@ -32,5 +35,6 @@ int main()
 
 	function<double(double)> inc = [](int x) {return 1 + x; };
 	int(*square)(int) = [](int x) {return x * x; };
+	system("pause");
 	return 0;
 }
