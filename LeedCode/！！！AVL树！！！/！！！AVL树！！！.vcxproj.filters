@@ -15,10 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="684_去掉最后成环的倒霉蛋.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="669_将平衡二叉树范围在(L,R)内的节点删除 .cpp">
+    <ClCompile Include="AVL树.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

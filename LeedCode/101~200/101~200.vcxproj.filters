@@ -60,5 +60,11 @@
     <ClCompile Include="120_最长的连续子序列.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="130_O是否被X包围.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="108_构建一棵BST.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

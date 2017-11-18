@@ -15,31 +15,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="镜像二叉树.cpp">
+    <ClCompile Include="方法1.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="知先序和中序求后续.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="广义表输入_遍历.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="广义表输入，层序遍历.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="完全二叉树的构建.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="输入类似BAL构构建二叉树.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="10叉树.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="c_ 遍历树.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="C:\Users\朱毅\Desktop\构建树\后序遍历+中序遍历构造树.cpp">
+    <ClCompile Include="方法2.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
