@@ -1,8 +1,9 @@
 #include <iostream>
 #include <unordered_map>
 #include <string>
+#include <sstream>
 using namespace std;
-
+/*
 class Solution {
 public:
 	string StringToMark(string& s) {
@@ -52,14 +53,21 @@ public:
 		return true;
 	}
 };
-int main() {
-	string pattern = "abba";
-	string str = "cat dog dog cat";
-
-	Solution sol;
-	cout << sol.wordPattern(pattern, str);
-
-	system("pause");
-	return 0;
-
-}
+*/
+class Solution {
+public:
+	bool wordPattern(string pattern, string str) {
+		unordered_map<string, int > ss;
+		unordered_map<char, int> ps;
+		istringstream  in(str);
+		int n = pattern.length(), i = 0;
+		for (string temp; in >> temp; ++i) {
+			//i == n , str ÖÐ ±Èpattern ¶à
+			if (i == n || ps[pattern[i]] != ss[temp]) {
+				return false;
+			}
+			ps[pattern[i]] = ss[temp] = i + 1;
+		}
+		return i == n;
+	}
+};

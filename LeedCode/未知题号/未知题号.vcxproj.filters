@@ -15,31 +15,16 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="运算表达式（栈）.cpp">
+    <ClCompile Include="combine.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="逆波兰式的转化与计算.cpp">
+    <ClCompile Include="最后一个单词的长度.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="二叉树的某节点的先祖.cpp">
+    <ClCompile Include="小屁孩分糖.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="C的任意类型栈.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="浏览器.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="栈中最小元素.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="四则表达式求值.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="表达式求值.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="逆波兰式.cpp">
+    <ClCompile Include="快速幂.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

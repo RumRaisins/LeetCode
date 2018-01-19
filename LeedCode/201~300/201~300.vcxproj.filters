@@ -75,5 +75,11 @@
     <ClCompile Include="290_是否符合模式串.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="258_数根.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="230_平衡搜索树第K大.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

@@ -121,16 +121,17 @@ void quick_sort(int *num, int left, int right) {
 		x = left, y = right;
 		z = num[left + rand() % (right - left + 1)];
 		do {
-			while (num[x] < z) ++x;
-			while (num[y] > z) --y;
+			while (num[x] < z) x++;
+			while (num[y] > z) y--;
 			if (x <= y) {
-				num[x] ^= num[y];
-				num[y] ^= num[x];
-				num[x] ^= num[y];
+				if (x != y) {
+					num[x] ^= num[y];
+					num[y] ^= num[x];
+					num[x] ^= num[y];
+				}
 				++x, --y;
 			}
 		} while (x <= y);
-		num[x] = z;
 		quick_sort(num, x + 1, right);
 		right = x - 1;
 	}
@@ -141,11 +142,11 @@ void quick_sort(int *num, int left, int right) {
 int main() {
 	
 
-	int p[10] = { 32, 1,23,45,2,3,56, 56,65,4 };
+	int p[10] = { 85,34,4,231,43,23,67,8,0,6 };
 
 	//qSort(p, 0, 9);
 	//insert_sort(p, 10);
-	quick_sort2(p, 0, 9);
+	quick_sort(p, 0, 9);
 	for (int i = 0; i < 10; ++i) {
 		cout << p[i] << " ";
 	}

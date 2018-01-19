@@ -41,7 +41,7 @@ void heap_sort(int *p, int n) {
 }
 
 int main() {
-	int p[10] = { 45 ,23, 21, 5, 3 ,67,23,21,6,3 };
+	int p[10] = { 32,4,21,54,10,78,8,24,6,7 };
 	heap_sort(p, 10);
 	for (auto c : p) {
 		printf("%d ", c);

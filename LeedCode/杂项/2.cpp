@@ -1,5 +1,7 @@
 #include <iostream>
 #include <vector>
+#include <queue>
+using std::queue;
 using std::cout;
 using std::cin;
 using std::vector;
@@ -60,6 +62,8 @@ int main() {
 	int n, m , temp;
 	cin >> n >> m;
 	vector<vector<int> >vec;
+	queue<int> q;
+	q.pop
 
 	/*for (int i = 0; i < n; ++i) {
 		vector<int> vv;

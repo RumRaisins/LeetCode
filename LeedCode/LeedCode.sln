@@ -73,6 +73,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "！！！SBTree！！！", 
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "！！！红黑树！！！", "！！！红黑树！！！\！！！红黑树！！！.vcxproj", "{93900041-6598-4FF0-A0AF-8E45D1C90C4F}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "未知题号", "未知题号\未知题号.vcxproj", "{40C896EA-F9BF-48D1-B709-2A0FC61B0C94}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -361,6 +363,14 @@ Global
 		{93900041-6598-4FF0-A0AF-8E45D1C90C4F}.Release|x64.Build.0 = Release|x64
 		{93900041-6598-4FF0-A0AF-8E45D1C90C4F}.Release|x86.ActiveCfg = Release|Win32
 		{93900041-6598-4FF0-A0AF-8E45D1C90C4F}.Release|x86.Build.0 = Release|Win32
+		{40C896EA-F9BF-48D1-B709-2A0FC61B0C94}.Debug|x64.ActiveCfg = Debug|x64
+		{40C896EA-F9BF-48D1-B709-2A0FC61B0C94}.Debug|x64.Build.0 = Debug|x64
+		{40C896EA-F9BF-48D1-B709-2A0FC61B0C94}.Debug|x86.ActiveCfg = Debug|Win32
+		{40C896EA-F9BF-48D1-B709-2A0FC61B0C94}.Debug|x86.Build.0 = Debug|Win32
+		{40C896EA-F9BF-48D1-B709-2A0FC61B0C94}.Release|x64.ActiveCfg = Release|x64
+		{40C896EA-F9BF-48D1-B709-2A0FC61B0C94}.Release|x64.Build.0 = Release|x64
+		{40C896EA-F9BF-48D1-B709-2A0FC61B0C94}.Release|x86.ActiveCfg = Release|Win32
+		{40C896EA-F9BF-48D1-B709-2A0FC61B0C94}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
